@@ -1,0 +1,35 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #12448f;
+    color: white;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content.expanded {
+    margin-left: 20px;
+}
+
+.back-icon {
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-icon.rotate {
+    transform: rotate(180deg);
+}
