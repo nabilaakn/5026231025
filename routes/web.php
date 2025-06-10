@@ -5,6 +5,8 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
+use App\Http\Controllers\BolpenController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +67,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class,'edit'] );
 Route::post('/pegawai/update', [PegawaiController::class,'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class,'hapus'] );
 Route::get('/pegawai/cari', [PegawaiController::class,'cari']);
+
+// routes/web.php
+Route::get('/bolpen', [BolpenController::class, 'index3']);
+Route::get('/bolpen/tambah', [BolpenController::class, 'tambah2']);
+Route::post('/bolpen/store', [BolpenController::class, 'store']);
+Route::get('/bolpen/edit/{id}', [BolpenController::class, 'edit2']);
+Route::post('/bolpen/update', [BolpenController::class, 'update']);
+Route::get('/bolpen/hapus/{id}', [BolpenController::class, 'hapus']);
+Route::get('/bolpen/cari', [BolpenController::class, 'cari']);
