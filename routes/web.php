@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BolpenController;
+use App\Http\Controllers\KeranjangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,3 +77,9 @@ Route::get('/bolpen/edit/{id}', [BolpenController::class, 'edit2']);
 Route::post('/bolpen/update', [BolpenController::class, 'update']);
 Route::get('/bolpen/hapus/{id}', [BolpenController::class, 'hapus']);
 Route::get('/bolpen/cari', [BolpenController::class, 'cari']);
+
+Route::get('/keranjang', [KeranjangController::class, 'index4']);
+Route::get('/keranjang/tambah', [KeranjangController::class, 'tambah3']);
+Route::post('/keranjang/store', [KeranjangController::class, 'store']);
+Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'destroy']);
+
