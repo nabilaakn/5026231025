@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BolpenController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,8 +79,17 @@ Route::post('/bolpen/update', [BolpenController::class, 'update']);
 Route::get('/bolpen/hapus/{id}', [BolpenController::class, 'hapus']);
 Route::get('/bolpen/cari', [BolpenController::class, 'cari']);
 
+// Route keranjang
 Route::get('/keranjang', [KeranjangController::class, 'index4']);
 Route::get('/keranjang/tambah', [KeranjangController::class, 'tambah3']);
 Route::post('/keranjang/store', [KeranjangController::class, 'store']);
 Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'destroy']);
 
+// Route karyawan
+Route::get('/karyawan', [KaryawanController::class, 'indexkaryawan']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
