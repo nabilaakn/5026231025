@@ -12,6 +12,7 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PekerjaController;
+use App\Http\Controllers\MyKaryawanController;
 
 
 
@@ -123,3 +124,8 @@ Route::get('/pekerja/input', [PekerjaController::class, 'input']);
 Route::post('/pekerja/store', [PekerjaController::class, 'store']);
 Route::get('/pekerja/hapus/{kodepegawai}', [PekerjaController::class, 'hapus']);
 
+//EAS MYKARYAWAN
+Route::get('/eas', [MyKaryawanController::class, 'indexmykar']);
+Route::get('/eas/edit/{kodepegawai}', [MyKaryawanController::class, 'editmykar']);
+Route::post('/eas/update/{kodepegawai}', [MyKaryawanController::class, 'updatemykar']);
+Route::get('/eas/view/{kodepegawai}', [MyKaryawanController::class, 'view']);
